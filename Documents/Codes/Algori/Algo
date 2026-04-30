@@ -1,0 +1,31 @@
+VAR
+   c : CHAR
+   length : INTEGER := 0
+   words  : INTEGER := 1
+   vowels : INTEGER := 0
+
+BEGIN
+
+   Read(c)
+
+   WHILE (c <> '.') DO
+
+      length := length + 1
+
+      IF (c = ' ') THEN
+         words := words + 1
+      END_IF
+
+      IF (c = 'a' OR c = 'e' OR c = 'i' OR c = 'o' OR c = 'u') THEN
+         vowels := vowels + 1
+      END_IF
+
+      Read(c)
+
+   END_WHILE
+
+   Write(length)
+   Write(words)
+   Write(vowels)
+
+END
